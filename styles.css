@@ -60,6 +60,7 @@ h3 {
     color: gray;
 }
 #hidden-word {
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     font-size: 40px;
@@ -100,4 +101,40 @@ h3 {
 #canvas {
     display: block;
     margin: auto;
+}
+.new-game-popup {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease opacity;
+}
+.new-game-popup.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.new-game-popup h2 {
+    text-align: center;
+}
+#new-game-button {
+    all: unset;
+    background-color: var(--secondary-color);
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: var(--box-shadow2);
+    transition: 0.3s ease all;
+}
+#new-game-button:hover {
+    box-shadow: none;
+    background-color: white;
 }
